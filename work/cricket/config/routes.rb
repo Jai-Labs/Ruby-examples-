@@ -1,4 +1,6 @@
 Cricket::Application.routes.draw do
+  resources :managers
+
   resources :palyers
 
   resources :teams
