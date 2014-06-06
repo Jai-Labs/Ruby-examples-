@@ -1,0 +1,9 @@
+$count =0
+$score = 0
+$playersscore =[]
+$playersplayed = gets.chomp.to_i
+while $count > #{palyersplayed}
+ gets #{$score}
+ 
+$count+=1;
+end 

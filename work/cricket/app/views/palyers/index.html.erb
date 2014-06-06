@@ -1,0 +1,31 @@
+<h1>Listing palyers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team Name</th>
+      <th>Player name</th>
+      <th>Score</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @palyers.each do |palyer| %>
+      <tr>
+        <td><%= palyer.team.name %></td>
+        <td><%= palyer.player_name %></td>
+        <td><%= palyer.score %></td>
+        <td><%= link_to 'Show', palyer %></td>
+        <td><%= link_to 'Edit', edit_palyer_path(palyer) %></td>
+        <td><%= link_to 'Destroy', palyer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Palyer', new_palyer_path %>

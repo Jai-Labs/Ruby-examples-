@@ -1,0 +1,11 @@
+count =0
+score = 0
+playersscore =[]
+playersplayed = gets.chomp.to_i
+while count < 3
+ gets #{score}
+ count = count + 1;
+ playersscore.push(count)
+ puts "array of scores #{playersscore} "
+ puts "after increment #{count}"
+end 
