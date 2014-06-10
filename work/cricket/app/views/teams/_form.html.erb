@@ -15,7 +15,14 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  <% f.fields_for(@team.manager) do |manager_form| %>
+    <%= manager_form.label :manager_name %>
+    <%= manager_form.text_field :manager_name %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>
+
