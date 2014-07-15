@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total score:</strong>
+  <%= @score.total_score %>
+</p>
+
+<p>
+  <strong>Wickets:</strong>
+  <%= @score.wickets %>
+</p>
+
+<p>
+  <strong>Highest score:</strong>
+  <%= @score.highest_score %>
+</p>
+
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>

@@ -1,0 +1,34 @@
+<%= form_for(@score) do |f| %>
+  <% if @score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+      <% @score.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :total_score %><br>
+    <%= f.number_field :total_score %>
+  </div>
+  <div class="field">
+    <%= f.label :wickets %><br>
+    <%= f.number_field :wickets %>
+  </div>
+  <div class="field">
+    <%= f.label :highest_score %><br>
+    <%= f.number_field :highest_score %>
+  </div>
+  <div class="field">
+    <%= f.label :player_name %><br>
+    <%= f.select :palyer_id, options_from_collection_for_select(Palyer.all, 'id', 'player_name') %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

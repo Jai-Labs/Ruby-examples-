@@ -1,5 +1,6 @@
 class Palyer < ActiveRecord::Base
 	has_many :scores
+  belongs_to :team
 
 	validates :player_name, presence: true
 	validates :score, presence: true
